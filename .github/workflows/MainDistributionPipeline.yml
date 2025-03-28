@@ -16,7 +16,7 @@ jobs:
     name: Build extension binaries
     uses: duckdb/extension-ci-tools/.github/workflows/_extension_distribution.yml@v1.2.1
     with:
-      extension_name: iceberg
+      extension_name: httpfs
       duckdb_version: v1.2.1
       ci_tools_version: v1.2.1
       exclude_archs: 'wasm_mvp;wasm_eh;wasm_threads;windows_amd64_rtools;windows_amd64_mingw'
@@ -27,7 +27,7 @@ jobs:
     uses: duckdb/extension-ci-tools/.github/workflows/_extension_deploy.yml@v1.2.1
     secrets: inherit
     with:
-      extension_name: iceberg
+      extension_name: httpfs
       duckdb_version: v1.2.1
       ci_tools_version: v1.2.1
       exclude_archs: 'wasm_mvp;wasm_eh;wasm_threads;windows_amd64_rtools;windows_amd64_mingw'
